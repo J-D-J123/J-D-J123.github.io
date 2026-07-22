@@ -314,6 +314,8 @@ a {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -334,7 +336,30 @@ a {
   display: block;
 }
 
+/* Two-image cross-fade slideshow */
+.project-thumb.slideshow {
+  position: relative;
+}
+
+.slideshow img {
+  position: absolute;
+  inset: 0;
+}
+
+.slideshow img:nth-of-type(2) {
+  animation: slideshow-swap 7s ease-in-out infinite;
+}
+
+@keyframes slideshow-swap {
+  0%, 42% { opacity: 1; }
+  50%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 1.5rem;
 }
 
@@ -369,6 +394,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  margin-top: auto;
+  align-self: flex-start;
   padding: 0.5rem 0.9rem;
   border-radius: 8px;
   background: #24292e;
