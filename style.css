@@ -454,9 +454,17 @@ a {
 /* Plain award line under the title */
 .award-line {
   margin-bottom: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text);
+  white-space: nowrap;
+}
+
+/* Let it wrap on very small phones so it can't overflow the card */
+@media (max-width: 420px) {
+  .award-line {
+    white-space: normal;
+  }
 }
 
 .project-links {
