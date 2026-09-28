@@ -417,10 +417,9 @@ a {
 }
 
 /* ---------- Hackathons ---------- */
-/* Reuses the project card look; centers cards instead of stretching one full width */
-.hackathons-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
-  justify-content: center;
+/* Reuses the project card look; the grid itself is the same responsive grid as Projects */
+.hackathons-grid .project-thumb {
+  height: 200px;
 }
 
 .hackathons-grid .project-tags {
